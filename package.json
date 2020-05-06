@@ -1,0 +1,80 @@
+{
+    "name": "elearning-system-api",
+    "version": "1.0.0",
+    "description": "a simple elearning api",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm run build && npm run server",
+        "server": "node ./dist/index",
+        "transpile": "babel ./src --out-dir dist",
+        "clean": "rimraf dist",
+        "build": "npm-run-all clean transpile",
+        "dev": "npm-run-all build server",
+        "watch:dev": "nodemon"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ethical-Ralph/E-Learning-App-API.git"
+    },
+    "keywords": [
+        "learn",
+        "online"
+    ],
+    "author": "Raphael Akinola",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Ethical-Ralph/E-Learning-App-API/issues"
+    },
+    "homepage": "https://github.com/Ethical-Ralph/E-Learning-App-API#readme",
+    "dependencies": {
+        "@hapi/joi": "^17.1.1",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-jwt": "^5.3.1",
+        "express-validator": "^6.4.0",
+        "jsonwebtoken": "^8.5.1",
+        "lodash": "^4.17.15",
+        "mongoose": "^5.9.2",
+        "mongoose-auto-increment-reworked": "^1.2.1",
+        "mongoose-unique-validator": "^2.0.3",
+        "nodemailer": "^6.4.6",
+        "passport": "^0.4.1",
+        "passport-local": "^1.0.0"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ],
+        "plugins": [
+            "@babel/plugin-transform-runtime"
+        ]
+    },
+    "nodemonConfig": {
+        "exec": "npm run dev",
+        "watch": [
+            "src/*"
+        ],
+        "ignore": [
+            "**/__tests__/**",
+            "*.test.js",
+            "*.spec.js"
+        ]
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.0",
+        "@babel/plugin-transform-runtime": "^7.9.0",
+        "@babel/preset-env": "^7.9.0",
+        "eslint": "^6.8.0",
+        "eslint-config-standard": "^14.1.1",
+        "eslint-plugin-import": "^2.20.1",
+        "eslint-plugin-node": "^11.0.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.1",
+        "nodemon": "^2.0.2",
+        "npm-run-all": "^4.1.5",
+        "rimraf": "^3.0.2"
+    }
+}
