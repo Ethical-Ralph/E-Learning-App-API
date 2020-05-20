@@ -44,16 +44,8 @@ app.use(routes)
 //ErrorHandler
 errorHandler(app);
 
+const PORT = process.env.PORT || 3000
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
     console.log(`app started at ${ process.env.PORT }`);
 });
-
-
-
-
-
-
-
-
-
