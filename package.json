@@ -35,7 +35,7 @@
         "express-jwt": "^6.0.0",
         "express-validator": "^6.4.0",
         "jsonwebtoken": "^8.5.1",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.21",
         "mongoose": "^5.9.2",
         "mongoose-auto-increment-reworked": "^1.2.1",
         "mongoose-unique-validator": "^2.0.3",
